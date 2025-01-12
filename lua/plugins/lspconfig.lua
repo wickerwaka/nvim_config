@@ -17,23 +17,23 @@ return {
 
                 -- set keybinds
                 opts.desc = "Show LSP references"
-                keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+                keymap.set("n", "gR", "<cmd>FzfLua lsp_references<CR>", opts) -- show definition, references
 
                 opts.desc = "Go to declaration"
                 keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
                 opts.desc = "Show LSP definitions"
-                keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
-                keymap.set("n", "C-]", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+                keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<CR>", opts) -- show lsp definitions
+                keymap.set("n", "C-]", "<cmd>FzfLua lsp_definitions<CR>", opts) -- show lsp definitions
 
                 opts.desc = "Show LSP implementations"
-                keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+                keymap.set("n", "gi", "<cmd>FzfLua lsp_implementations<CR>", opts) -- show lsp implementations
 
                 opts.desc = "Show LSP type definitions"
-                keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+                keymap.set("n", "gt", "<cmd>FzfLua lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
                 opts.desc = "Show buffer diagnostics"
-                keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+                keymap.set("n", "<leader>D", "<cmd>FzfLua diagnostics_document<CR>", opts) -- show  diagnostics for file
 
                 opts.desc = "Show line diagnostics"
                 keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
@@ -52,6 +52,19 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         lspconfig["clangd"].setup({
+            capabilities = capabilities
+        })
+        lspconfig["pylsp"].setup({
+            capabilities = capabilities,
+            settings = {
+                pylsp = {
+                    plugins = {
+                        pycodestyle = { enabled=false }
+                    }
+                }
+            },
+        })
+         lspconfig["rust_analyzer"].setup({
             capabilities = capabilities
         })
     end

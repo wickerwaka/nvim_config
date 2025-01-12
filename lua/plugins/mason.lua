@@ -12,6 +12,8 @@ return {
         mason_lspconfig.setup({
             ensure_installed = {
                 "clangd",
+                "rust_analyzer",
+                "pylsp",
             },
 
             automatic_installation = true

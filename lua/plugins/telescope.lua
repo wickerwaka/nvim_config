@@ -1,3 +1,5 @@
+return {}
+--[[
 return {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
@@ -28,3 +30,4 @@ return {
         km.set('n', '<leader>fc', builtin.grep_string, { desc = "Fuzzy find current string" })
     end
 }
+--]]
