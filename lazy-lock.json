@@ -4,7 +4,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "fzf-lua": { "branch": "main", "commit": "ba6eee118e8fbc3bacaa8649b0d236ed78f91a92" },
-  "lazy.nvim": { "branch": "main", "commit": "d8f26efd456190241afd1b0f5235fe6fdba13d4a" },
+  "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
   "markview.nvim": { "branch": "main", "commit": "0af0b486c28c682f689e51d289c2da77efdc0737" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "e942edf5c85b6a2ab74059ea566cac5b3e1514a4" },
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },

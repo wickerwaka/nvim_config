@@ -13,3 +13,9 @@ keymap.set("v", "<Up>", "gk", {})
 keymap.set("i", "<Down>", "<C-o>gj", {})
 keymap.set("i", "<Up>", "<C-o>gk", {})
 
+-- Indent, stay in visual mode
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+
+keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Shift visual selected line down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Shift visual selected line up

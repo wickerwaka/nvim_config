@@ -9,6 +9,7 @@ return {
 
         local km = vim.keymap
         km.set('n', '<C-p>', fzf.files, { desc = "Fuzzy find file" })
+        km.set('n', '<leader> ', fzf.files, { desc = "Fuzzy find file" })
         km.set('n', '<leader>ff', fzf.files, { desc = "Fuzzy find file" })
         km.set('n', '<leader>fr', fzf.oldfiles, { desc = "Fuzzy find file" })
         km.set('n', '<leader>fg', fzf.live_grep_glob, { desc = "Fuzzy grep" })

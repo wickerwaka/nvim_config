@@ -64,8 +64,14 @@ return {
                 }
             },
         })
-         lspconfig["rust_analyzer"].setup({
-            capabilities = capabilities
+        
+        lspconfig["rust_analyzer"].setup({
+            capabilities = capabilities,
+        })
+
+        lspconfig["verible"].setup({
+            capabilities = capabilities,
+            cmd = {'verible-verilog-ls', '--rules_config_search'},
         })
     end
 }
