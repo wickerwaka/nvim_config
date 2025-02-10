@@ -1,9 +1,10 @@
 return {
-    "loctvl842/monokai-pro.nvim",
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
-        require("monokai-pro").setup()
-        vim.cmd("colorscheme monokai-pro")
+        require("tokyonight").setup()
+        vim.cmd("colorscheme tokyonight")
     end
 }
 
