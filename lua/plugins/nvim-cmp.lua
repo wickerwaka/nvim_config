@@ -9,7 +9,7 @@ return {
         local cmp = require("cmp")
         cmp.setup({
             completion = {
-                completeopt = "menu,menuone,preview,noselect"
+                completeopt = "menu,menuone,noselect,preview"
             },
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
@@ -17,6 +17,8 @@ return {
                 { name = "path" },
             }),
             mapping = cmp.mapping.preset.insert {
+                ['<Up>'] = cmp.config.disable,
+                ['<Down>'] = cmp.config.disable,
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-Space>'] = cmp.mapping.complete {},
