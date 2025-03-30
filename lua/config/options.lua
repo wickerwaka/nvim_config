@@ -28,3 +28,4 @@ opt.splitbelow = true
 
 
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.g.compiler_gcc_ignore_unmatched_lines = true
