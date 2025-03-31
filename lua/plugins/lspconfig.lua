@@ -11,7 +11,8 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         lspconfig["clangd"].setup({
-            capabilities = capabilities
+            capabilities = capabilities,
+            single_file_support = false,
         })
         lspconfig["pylsp"].setup({
             capabilities = capabilities,
