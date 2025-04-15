@@ -16,6 +16,12 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 CompilerSet errorformat=
+      \%%%trror%.%#:\ %f:%l:%c:\ %m,
+      \%%%trror%.%#:\ %f:%l:\ %m,
+      \%%%tarning%.%#:\ %f:%l:%c:\ %m,
+      \%%%tarning%.%#:\ %f:%l:\ %m
+
+CompilerSet errorformat+=
       \%*[^\"]\"%f\"%*\\D%l:%c:\ %m,
       \%*[^\"]\"%f\"%*\\D%l:\ %m,
       \\"%f\"%*\\D%l:%c:\ %m,
@@ -35,12 +41,6 @@ CompilerSet errorformat=
       \%D%*\\a:\ Entering\ directory\ %*[`']%f',
       \%X%*\\a:\ Leaving\ directory\ %*[`']%f',
       \%DMaking\ %*\\a\ in\ %f
-
-CompilerSet errorformat+=
-      \%%%trror%.%#:\ %f:%l:%c:\ %m,
-      \%%%trror%.%#:\ %f:%l:\ %m,
-      \%%%tarning%.%#:\ %f:%l:%c:\ %m,
-      \%%%tarning%.%#:\ %f:%l:\ %m
 
 
 CompilerSet errorformat+=%-G%.%#
