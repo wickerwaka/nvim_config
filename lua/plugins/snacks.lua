@@ -3,7 +3,14 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-        picker = {},
+        picker = {
+            matcher = {
+                cwd_bonus = true
+            },
+            debug = {
+                scores = true
+            }
+        },
         explorer = {},
     },
     keys = {
