@@ -3,7 +3,8 @@ return {
     event = "InsertEnter",
     dependencies = {
         "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path"
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
         local cmp = require("cmp")
@@ -42,5 +43,7 @@ return {
                 end, { 'i', 's' }),
             },
         })
+
+        vim.lsp.config("*", { capabilities = require("cmp_nvim_lsp").default_capabilities() })
     end
 }

@@ -8,7 +8,7 @@ return {
                 cwd_bonus = true
             },
             debug = {
-                scores = true
+                scores = false
             }
         },
         explorer = {},
