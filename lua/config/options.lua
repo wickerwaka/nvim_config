@@ -37,22 +37,3 @@ vim.g.compiler_gcc_ignore_unmatched_lines = true
 vim.g.neovide_cursor_animation_length=0.02
 vim.g.neovide_cursor_trail_size=0.3
 
-vim.diagnostic.config({
-    virtual_text = true,  -- Enable inline virtual text
-    signs = true,         -- Show diagnostic signs in the gutter (optional, but helpful)
-    underline = true,     -- Underline problematic code (optional)
-    float = {             -- Configuration for the floating window
-        focusable = false,
-        style = "minimal",
-        border = "rounded",
-        source = "always",
-        header = "",
-        prefix = "",
-    },
-})
-
-vim.lsp.config('verible', {
-    cmd = { 'verible-verilog-ls', '--rules_config_search' },
-    -- root_markers = { 'verible.list', '.git' }
-})
-

@@ -14,7 +14,6 @@ return {
                 "clangd",
                 "rust_analyzer",
                 "pylsp",
-                "verible",
             },
 
             automatic_installation = true
