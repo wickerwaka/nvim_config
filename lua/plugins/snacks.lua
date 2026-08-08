@@ -13,6 +13,7 @@ return {
         },
         explorer = {},
         terminal = {},
+        input = {},
     },
     keys = {
         -- Top Pickers & Explorer

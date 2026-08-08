@@ -29,6 +29,8 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+opt.title = true
+
 vim.o.guifont = "MesloLGS Nerd Font:h11"
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
